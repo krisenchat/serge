@@ -60,3 +60,7 @@ RUN pip install ./api
 
 COPY --chmod=0755 scripts/deploy.sh /usr/src/app/deploy.sh
 CMD ./deploy.sh
+
+EXPOSE 8008
+VOLUME datadb /data/db
+VOLUME weights /usr/src/app/weights/
